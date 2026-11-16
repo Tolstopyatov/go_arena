@@ -1,0 +1,2 @@
+{ "name": "@go-arena/shared", "version": "0.1.0", "type": "module", "main": "src/protocol.ts", "types": "src/protocol.ts",
+  "dependencies": { "@go-arena/engine": "*" } }

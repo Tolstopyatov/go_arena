@@ -1,0 +1,3 @@
+{ "name": "@go-arena/worker", "private": true, "type": "module",
+  "dependencies": { "grammy": "^1.38.0", "@go-arena/engine": "*", "@go-arena/shared": "*" },
+  "devDependencies": { "wrangler": "^4.0.0", "@cloudflare/workers-types": "^4.0.0" } }

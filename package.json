@@ -1,0 +1,4 @@
+{ "name": "go-arena", "private": true, "type": "module",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": { "test": "vitest run" },
+  "devDependencies": { "typescript": "^5.9.0", "vitest": "^3.2.0" } }

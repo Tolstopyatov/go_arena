@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS users(
+  id TEXT PRIMARY KEY, name TEXT NOT NULL DEFAULT '', username TEXT,
+  rating REAL NOT NULL DEFAULT 1500, rd REAL NOT NULL DEFAULT 350, vol REAL NOT NULL DEFAULT 0.06,
+  position INTEGER NOT NULL DEFAULT 0, wins INTEGER NOT NULL DEFAULT 0, losses INTEGER NOT NULL DEFAULT 0,
+  missed INTEGER NOT NULL DEFAULT 0, last_game_at INTEGER NOT NULL DEFAULT 0, created_at INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE IF NOT EXISTS challenges(key TEXT PRIMARY KEY, challenger TEXT, target TEXT, chat_id INTEGER, created_at INTEGER);
+CREATE TABLE IF NOT EXISTS active(user_id TEXT PRIMARY KEY, game_id TEXT, color INTEGER, opp_id TEXT, deadline INTEGER);
+CREATE TABLE IF NOT EXISTS archive(id TEXT PRIMARY KEY, black TEXT, white TEXT, winner TEXT, result TEXT,
+  size INTEGER, sgf TEXT, chat_id INTEGER, ended_at INTEGER);
+CREATE INDEX IF NOT EXISTS idx_archive_players ON archive(black, white);
+CREATE INDEX IF NOT EXISTS idx_users_pos ON users(position);

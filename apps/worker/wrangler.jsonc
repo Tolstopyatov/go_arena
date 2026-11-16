@@ -1,0 +1,7 @@
+{ "name": "go-arena", "main": "src/index.ts", "compatibility_date": "2025-09-01",
+  "vars": { "PAGES_ORIGIN": "https://tolstopyatov.github.io",
+            "BOT_USERNAME": "<имя_бота>", "WORKER_URL": "https://go-arena.<сабдомен>.workers.dev" },
+  "d1_databases": [{ "binding": "DB", "database_name": "go-arena", "database_id": "<из wrangler d1 create>" }],
+  "durable_objects": { "bindings": [{ "name": "GAME_ROOMS", "class_name": "GameRoom" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }],  // sqlite-классы = free-план
+  "triggers": { "crons": ["0 * * * *"] } }

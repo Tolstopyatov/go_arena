@@ -1,5 +1,5 @@
 export class Hand {
-  private raf = 0; private playing = false; private skip = false;
+  private raf = 0; playing = false; private skip = false;
   constructor(private cv: HTMLCanvasElement, private frames: HTMLCanvasElement[], private scale: number) {}
   cancel() { this.skip = true; }
   play(tx: number, ty: number, onPlace: () => void): Promise<void> {
